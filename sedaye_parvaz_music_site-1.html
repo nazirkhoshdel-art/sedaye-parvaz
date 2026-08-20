@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صدای پرواز | سایت موزیک</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#09090d;color:#fff}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(9,9,13,.9);backdrop-filter:blur(15px);border-bottom:1px solid #222}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:24px;font-weight:bold}.logo span{color:#c66cff}
+nav{display:flex;gap:25px;color:#ccc;font-size:14px}nav a:hover{color:#d58cff}
+.hero{margin-top:28px;border-radius:28px;padding:70px 8%;min-height:390px;display:flex;align-items:center;background:linear-gradient(120deg,#24133b,#11111a 55%,#32184b);overflow:hidden}
+.hero h1{font-size:46px;margin:0 0 18px}.hero p{font-size:18px;color:#d0cbd6;line-height:2}.btn{display:inline-block;padding:13px 25px;border-radius:30px;background:#c35cff;font-weight:bold;margin-top:15px}
+section{padding:45px 0}.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.title h2{margin:0;font-size:25px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#13131a;border:1px solid #24242e;border-radius:18px;padding:12px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#9c4dca}.cover{height:210px;border-radius:14px;background:linear-gradient(135deg,#5e2a76,#17121d);display:flex;align-items:center;justify-content:center;font-size:55px}.card h3{margin:14px 5px 5px;font-size:16px}.card p{margin:0 5px;color:#999;font-size:12px}.play{width:42px;height:42px;border-radius:50%;border:0;background:#c35cff;color:#fff;font-size:18px;float:left;margin-top:-38px;margin-left:8px;cursor:pointer}
+.video{height:300px;border-radius:22px;background:linear-gradient(135deg,#21132c,#111);display:flex;align-items:center;justify-content:center;font-size:60px;border:1px solid #292332}
+footer{padding:35px 0 100px;color:#888;text-align:center;border-top:1px solid #222}.player{position:fixed;bottom:0;left:0;right:0;background:#15151c;border-top:1px solid #2b2b35;padding:12px;z-index:20}.player-inner{width:min(1120px,92%);margin:auto;display:flex;align-items:center;gap:15px}.player button{border:0;border-radius:50%;width:42px;height:42px;background:#c35cff;color:#fff;font-size:18px}.progress{height:5px;background:#333;border-radius:10px;flex:1}.progress i{display:block;width:25%;height:100%;background:#c35cff;border-radius:10px}
+@media(max-width:800px){nav{display:none}.hero{min-height:330px;padding:45px 7%}.hero h1{font-size:34px}.grid{grid-template-columns:repeat(2,1fr)}.cover{height:160px}.video{height:220px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:12px}.card{padding:8px}.cover{height:135px}.hero p{font-size:14px}.logo{font-size:20px}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><div class="logo">🎵 صدای <span>پرواز</span></div><nav><a href="#">خانه</a><a href="#songs">آهنگ‌ها</a><a href="#videos">موزیک‌ویدیو</a><a href="#about">درباره ما</a></nav></div></header>
+
+<main class="container">
+<section class="hero">
+<div><h1>موسیقی، صدای احساس ❤️</h1><p>به دنیای موسیقی صدای پرواز خوش آمدید.<br>آهنگ‌های تازه، عاشقانه، شاد و خاطره‌انگیز را اینجا بشنوید.</p><a class="btn" href="#songs">🎧 شنیدن آهنگ‌ها</a></div>
+</section>
+
+<section id="songs"><div class="title"><h2>🎶 آهنگ‌های جدید</h2><span>مشاهده همه ←</span></div>
+<div class="grid">
+<div class="card"><div class="cover">🌹</div><button class="play" onclick="playSong('بهار آرزوهای من')">▶</button><h3>بهار آرزوهای من</h3><p>صدای پرواز • جدید</p></div>
+<div class="card"><div class="cover">❤️</div>
+<button class="play" onclick="playSong('یاور قلب منی')">▶</button>
+<h3>یاور قلب منی</h3><p>صدای پرواز • عاشقانه</p>
+<audio controls style="width:100%;margin-top:12px">
+<source src="music/yavar-ghalbe-mani.mp3" type="audio/mpeg">
+مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+</audio>
+<a href="music/yavar-ghalbe-mani.mp3" download style="display:block;text-align:center;margin-top:8px;color:#d58cff">⬇️ دانلود آهنگ</a>
+</div>
+<div class="card"><div class="cover">🌙</div><button class="play" onclick="playSong('رویای شیرین')">▶</button><h3>رویای شیرین</h3><p>صدای پرواز • احساسی</p></div>
+<div class="card"><div class="cover">🎸</div><button class="play" onclick="playSong('دلتنگی')">▶</button><h3>دلتنگی</h3><p>صدای پرواز • غمگین</p></div>
+</div></section>
+
+<section id="videos"><div class="title"><h2>🎬 موزیک‌ویدیو</h2></div><div class="video">▶️</div></section>
+<section id="about"><div class="title"><h2>✨ درباره صدای پرواز</h2></div><p style="color:#aaa;line-height:2">اینجا خانه‌ای برای موسیقی، شعر و احساس است. این بخش را می‌توانی با معرفی خودت، لینک شبکه‌های اجتماعی و اطلاعات هنری‌ات کامل کنی.</p></section>
+</main>
+
+<footer>© 2026 صدای پرواز — تمامی حقوق محفوظ است</footer>
+<div class="player"><div class="player-inner"><button onclick="toggle()">▶</button><strong id="now">آهنگی انتخاب نشده</strong><div class="progress"><i></i></div><span>🎵</span></div></div>
+<script>
+let playing=false;
+function playSong(name){document.getElementById('now').textContent=name; playing=true; document.querySelector('.player button').textContent='Ⅱ'}
+function toggle(){playing=!playing;document.querySelector('.player button').textContent=playing?'Ⅱ':'▶'}
+</script>
+</body>
+</html>
